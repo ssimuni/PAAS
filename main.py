@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from routers import even, matrix, nth_largest, auth, register
 
+@app.get("/")
+def root():
+    return {"message": "Welcome to the FastAPI Cloud App! Visit /docs for the API interface."}
+
+
 
 app = FastAPI(
     title="Cloud Computing LAB PAAS",
